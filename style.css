@@ -1,0 +1,31 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	box-shadow: 3px 3px 10px black;
+	border-top: 5px solid purple;
+	border-bottom: 5px solid purple;
+}
+
+.todo {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+}
+
+.todo__value {
+	background: transparent;
+	border: none;
+	outline: none;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	flex-grow: 1;
+}	
+
+.todo:has(.todo__checkbox:checked) {
+	color: white;
+	background:purple;
+	text-decoration: line-through;
+	order: 1;
+}
